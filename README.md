@@ -9,7 +9,7 @@ This C++ library provides ciphertext types to allow computation over encrypted d
 - HE2Ciphertext: ciphertext encrypted with HE2/N homomorphic ciphers. Supports addition and multiplication.
 - HE1Array: ciphertext encrypted with HE1/N homomorphic ciphers. Implementation for GPU addition and multiplication.
 - OPECiphertext: ciphertext encrypted with GACD OPE cipher. Supports comparison tests.
-- OPECiphertext: ciphertext encrypted with POlyACD OPE cipher. Supports comparison tests.
+- PolyCiphertext: ciphertext encrypted with PolyACD OPE cipher. Supports comparison tests.
 - SSECiphertext: ciphertext encrypted with SSE cipher. Supports equality test (`match`).
 
 ## Compilation
