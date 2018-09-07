@@ -1,5 +1,5 @@
 # cryptango
-&copy; University of Leeds 2018
+&copy; James Dyer and University of Leeds 2018
 
 Ciphertext classes for European Project TANGO (http://tango-project.eu).
 ## Description
