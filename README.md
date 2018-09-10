@@ -26,7 +26,7 @@ This builds a static and shared library in the `lib/` subfolder. You may need to
 - boost: `boost_iostreams` and `boost_serialization` libraries (https://www.boost.org/)
 - NTL: Number Theory Library (http://www.shoup.net/ntl/)
 - jsoncpp: JSON C++ library (https://github.com/open-source-parsers/jsoncpp)
-- Crypto++: C++ cryptographic library (https://www.cryptopp.com/)# cryptango
+- Crypto++: C++ cryptographic library (https://www.cryptopp.com/)
 
 Additionally, for GPU support
 - xmp (https://github.com/NVlabs/xmp/)
