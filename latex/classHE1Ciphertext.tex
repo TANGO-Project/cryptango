@@ -1,0 +1,304 @@
+\hypertarget{classHE1Ciphertext}{}\section{H\+E1\+Ciphertext Class Reference}
+\label{classHE1Ciphertext}\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+
+
+{\ttfamily \#include $<$H\+E1\+Ciphertext.\+h$>$}
+
+
+
+Inheritance diagram for H\+E1\+Ciphertext\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classHE1Ciphertext__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for H\+E1\+Ciphertext\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classHE1Ciphertext__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHE1Ciphertext_afd58548a4f93ef8576f35677fa42e35c}{H\+E1\+Ciphertext} ()
+\item 
+\hyperlink{classHE1Ciphertext_a4956d0c93fecd2db56a51e77f6f959ef}{H\+E1\+Ciphertext} (N\+T\+L\+::\+Z\+Z\+\_\+p \&\hyperlink{classCiphertext_adef9aae9d923eb100b4a1ad58ce495f1}{ciphertext})
+\item 
+\hyperlink{classHE1Ciphertext_a178b26d8b0a54d3e1e0e5bb04bb09bd6}{H\+E1\+Ciphertext} (N\+T\+L\+::\+ZZ \&\hyperlink{classCiphertext_adef9aae9d923eb100b4a1ad58ce495f1}{ciphertext})
+\item 
+\hyperlink{classHE1Ciphertext_a1f1b6b024af4615bc3a54025c42382dc}{H\+E1\+Ciphertext} (std\+::string \&str)
+\item 
+virtual \hyperlink{classHE1Ciphertext_ab5b083f4f4d980d127751df627b976e9}{$\sim$\+H\+E1\+Ciphertext} ()
+\item 
+\hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \& \hyperlink{classHE1Ciphertext_a3ce293f9fd8d25c2921c589bb8f8c171}{operator+=} (const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&o)
+\item 
+\hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \& \hyperlink{classHE1Ciphertext_ab2eb089852b2d0155c4da6080886a75a}{operator$\ast$=} (const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&o)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classHE1Ciphertext_a3cf78bc8d18c72fbb8bd116447371bf2}{set\+Modulus} (N\+T\+L\+::\+ZZ \&\hyperlink{classHE1Ciphertext_a924bd87bcc91518945bc039f10a20a48}{modulus})
+\item 
+static void \hyperlink{classHE1Ciphertext_a7b9c00baa1bfa692cfa518f98a46da78}{set\+Modulus} (std\+::string \&parameters)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \hyperlink{classHE1Ciphertext_a2868e8110f81031f5e6263e97a3232c0}{save} (Archive \&ar, const unsigned int version) const
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \hyperlink{classHE1Ciphertext_a8a9024694e1826459a53be0c7a82925e}{load} (Archive \&ar, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \hyperlink{classHE1Ciphertext_ac2c27abc00dbef4ea47d7b4a3588dd1c}{serialize} (Archive \&ar, const unsigned int version)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static N\+T\+L\+::\+ZZ \hyperlink{classHE1Ciphertext_a924bd87bcc91518945bc039f10a20a48}{modulus}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classHE1Ciphertext_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\item 
+std\+::ostream \& \hyperlink{classHE1Ciphertext_a684afdb22c43258ab0e2e5ab73abaed0}{operator$<$$<$} (std\+::ostream \&o, const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&c)
+\item 
+std\+::istream \& \hyperlink{classHE1Ciphertext_a1e2c0400cdd3fca5fcd4946f9b053b8c}{operator$>$$>$} (std\+::istream \&i, const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&c)
+\item 
+\hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \hyperlink{classHE1Ciphertext_a2e914308f6b7d88f63067fca516f4055}{operator+} (const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&a, const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&b)
+\item 
+\hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \hyperlink{classHE1Ciphertext_a8b5554bdd70338b6c916db1423702314}{operator$\ast$} (const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&a, const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&b)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHE1Ciphertext_afd58548a4f93ef8576f35677fa42e35c}\label{classHE1Ciphertext_afd58548a4f93ef8576f35677fa42e35c}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{H\+E1\+Ciphertext()}{HE1Ciphertext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily H\+E1\+Ciphertext\+::\+H\+E1\+Ciphertext (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor \mbox{\Hypertarget{classHE1Ciphertext_a4956d0c93fecd2db56a51e77f6f959ef}\label{classHE1Ciphertext_a4956d0c93fecd2db56a51e77f6f959ef}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{H\+E1\+Ciphertext()}{HE1Ciphertext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily H\+E1\+Ciphertext\+::\+H\+E1\+Ciphertext (\begin{DoxyParamCaption}\item[{N\+T\+L\+::\+Z\+Z\+\_\+p \&}]{ciphertext }\end{DoxyParamCaption})}
+
+Initialise {\ttfamily ciphertext} with the supplied value 
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & An N\+TL multiprecision modular integer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE1Ciphertext_a178b26d8b0a54d3e1e0e5bb04bb09bd6}\label{classHE1Ciphertext_a178b26d8b0a54d3e1e0e5bb04bb09bd6}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{H\+E1\+Ciphertext()}{HE1Ciphertext()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily H\+E1\+Ciphertext\+::\+H\+E1\+Ciphertext (\begin{DoxyParamCaption}\item[{N\+T\+L\+::\+ZZ \&}]{ciphertext }\end{DoxyParamCaption})}
+
+Initialise {\ttfamily ciphertext} with the supplied value 
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & An N\+TL multiprecision integer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE1Ciphertext_a1f1b6b024af4615bc3a54025c42382dc}\label{classHE1Ciphertext_a1f1b6b024af4615bc3a54025c42382dc}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{H\+E1\+Ciphertext()}{HE1Ciphertext()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily H\+E1\+Ciphertext\+::\+H\+E1\+Ciphertext (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+Initialise {\ttfamily ciphertext} with the supplied decimal string 
+\begin{DoxyParams}{Parameters}
+{\em str} & A decimal string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE1Ciphertext_ab5b083f4f4d980d127751df627b976e9}\label{classHE1Ciphertext_ab5b083f4f4d980d127751df627b976e9}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!````~H\+E1\+Ciphertext@{$\sim$\+H\+E1\+Ciphertext}}
+\index{````~H\+E1\+Ciphertext@{$\sim$\+H\+E1\+Ciphertext}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{$\sim$\+H\+E1\+Ciphertext()}{~HE1Ciphertext()}}
+{\footnotesize\ttfamily H\+E1\+Ciphertext\+::$\sim$\+H\+E1\+Ciphertext (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default destuctor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classHE1Ciphertext_a8a9024694e1826459a53be0c7a82925e}\label{classHE1Ciphertext_a8a9024694e1826459a53be0c7a82925e}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!load@{load}}
+\index{load@{load}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void H\+E1\+Ciphertext\+::load (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Deserialise object from archive 
+\begin{DoxyParams}{Parameters}
+{\em ar} & An archive \\
+\hline
+{\em version} & Class version \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE1Ciphertext_ab2eb089852b2d0155c4da6080886a75a}\label{classHE1Ciphertext_ab2eb089852b2d0155c4da6080886a75a}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \& H\+E1\+Ciphertext\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&}]{o }\end{DoxyParamCaption})}
+
+Performs modular multiplication of {\ttfamily this.\+ciphertext} and {\ttfamily o.\+ciphertext}. Assigns result to {\ttfamily this.\+ciphertext} 
+\begin{DoxyParams}{Parameters}
+{\em o} & {\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily this} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE1Ciphertext_a3ce293f9fd8d25c2921c589bb8f8c171}\label{classHE1Ciphertext_a3ce293f9fd8d25c2921c589bb8f8c171}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \& H\+E1\+Ciphertext\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&}]{o }\end{DoxyParamCaption})}
+
+Performs modular addition of {\ttfamily this.\+ciphertext} and {\ttfamily o.\+ciphertext}. Assigns result to {\ttfamily this.\+ciphertext} 
+\begin{DoxyParams}{Parameters}
+{\em o} & {\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily this} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE1Ciphertext_a2868e8110f81031f5e6263e97a3232c0}\label{classHE1Ciphertext_a2868e8110f81031f5e6263e97a3232c0}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!save@{save}}
+\index{save@{save}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void H\+E1\+Ciphertext\+::save (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Serialise object to archive. 
+\begin{DoxyParams}{Parameters}
+{\em ar} & An archive \\
+\hline
+{\em version} & Class version \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE1Ciphertext_ac2c27abc00dbef4ea47d7b4a3588dd1c}\label{classHE1Ciphertext_ac2c27abc00dbef4ea47d7b4a3588dd1c}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!serialize@{serialize}}
+\index{serialize@{serialize}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void H\+E1\+Ciphertext\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Bidirectional serialisation of this object \begin{DoxySeeAlso}{See also}
+\hyperlink{classHE1Ciphertext_a2868e8110f81031f5e6263e97a3232c0}{save} 
+
+\hyperlink{classHE1Ciphertext_a8a9024694e1826459a53be0c7a82925e}{load} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & An Archive \\
+\hline
+{\em version} & Class version \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE1Ciphertext_a3cf78bc8d18c72fbb8bd116447371bf2}\label{classHE1Ciphertext_a3cf78bc8d18c72fbb8bd116447371bf2}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!set\+Modulus@{set\+Modulus}}
+\index{set\+Modulus@{set\+Modulus}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{set\+Modulus()}{setModulus()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void H\+E1\+Ciphertext\+::set\+Modulus (\begin{DoxyParamCaption}\item[{N\+T\+L\+::\+ZZ \&}]{mod }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets the public modulus 
+\begin{DoxyParams}{Parameters}
+{\em mod} & An N\+TL multiprecision integer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE1Ciphertext_a7b9c00baa1bfa692cfa518f98a46da78}\label{classHE1Ciphertext_a7b9c00baa1bfa692cfa518f98a46da78}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!set\+Modulus@{set\+Modulus}}
+\index{set\+Modulus@{set\+Modulus}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{set\+Modulus()}{setModulus()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void H\+E1\+Ciphertext\+::set\+Modulus (\begin{DoxyParamCaption}\item[{std\+::string \&}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets the public modulus from a J\+S\+ON String 
+\begin{DoxyParams}{Parameters}
+{\em parameters} & A J\+S\+ON string \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classHE1Ciphertext_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classHE1Ciphertext_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{boost\+::serialization\+::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classHE1Ciphertext_a8b5554bdd70338b6c916db1423702314}\label{classHE1Ciphertext_a8b5554bdd70338b6c916db1423702314}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator$\ast$}{operator*}}
+{\footnotesize\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&}]{a,  }\item[{const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Performs modular multiplication of {\ttfamily a.\+ciphertext} and {\ttfamily b.\+ciphertext} 
+\begin{DoxyParams}{Parameters}
+{\em a} & {\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext}} object \\
+\hline
+{\em b} & {\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext}} object containing the product 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE1Ciphertext_a2e914308f6b7d88f63067fca516f4055}\label{classHE1Ciphertext_a2e914308f6b7d88f63067fca516f4055}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!operator+@{operator+}}
+\index{operator+@{operator+}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&}]{a,  }\item[{const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Performs modular addition of {\ttfamily a.\+ciphertext} and {\ttfamily b.\+ciphertext} 
+\begin{DoxyParams}{Parameters}
+{\em a} & {\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext}} object \\
+\hline
+{\em b} & {\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext}} object containing the sum 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE1Ciphertext_a684afdb22c43258ab0e2e5ab73abaed0}\label{classHE1Ciphertext_a684afdb22c43258ab0e2e5ab73abaed0}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Write {\ttfamily ciphertext} to output stream as decimal string 
+\begin{DoxyParams}{Parameters}
+{\em o} & Output stream \\
+\hline
+{\em c} & {\ttfamily \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the output stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE1Ciphertext_a1e2c0400cdd3fca5fcd4946f9b053b8c}\label{classHE1Ciphertext_a1e2c0400cdd3fca5fcd4946f9b053b8c}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{i,  }\item[{const \hyperlink{classHE1Ciphertext}{H\+E1\+Ciphertext} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classHE1Ciphertext_a924bd87bcc91518945bc039f10a20a48}\label{classHE1Ciphertext_a924bd87bcc91518945bc039f10a20a48}} 
+\index{H\+E1\+Ciphertext@{H\+E1\+Ciphertext}!modulus@{modulus}}
+\index{modulus@{modulus}!H\+E1\+Ciphertext@{H\+E1\+Ciphertext}}
+\subsubsection{\texorpdfstring{modulus}{modulus}}
+{\footnotesize\ttfamily N\+T\+L\+::\+ZZ H\+E1\+Ciphertext\+::modulus\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+A public cipher parameter\+: the modulus for arithmetic 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{HE1Ciphertext_8h}{H\+E1\+Ciphertext.\+h}\item 
+src/\hyperlink{HE1Ciphertext_8cpp}{H\+E1\+Ciphertext.\+cpp}\end{DoxyCompactItemize}

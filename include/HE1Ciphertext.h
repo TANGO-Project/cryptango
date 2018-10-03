@@ -23,23 +23,40 @@
 
 class HE1Ciphertext : public Ciphertext<NTL::ZZ_p>{
 private:
+	/**
+	 * A public cipher parameter: the modulus for arithmetic
+	 */
 	static NTL::ZZ modulus;
 	friend class boost::serialization::access;
-	template<class Archive>
-	void save(Archive & ar, const unsigned int version) const
+	/**
+	 * Serialise object to archive.
+	 * @param ar An archive
+	 * @param version Class version
+	 */
+	template <class Archive> void save(Archive & ar, const unsigned int version) const
 	{
 		ar << modulus;
 		ar << ciphertext;
 	}
-	template <class Archive>
-	void load(Archive & ar, const unsigned int version)
+	/**
+	 * Deserialise object from archive
+	 * @param ar An archive
+	 * @param version Class version
+	 */
+	template <class Archive> void load(Archive & ar, const unsigned int version)
 	{
 		ar >> modulus;
 		NTL::ZZ_p::init(modulus); //Need to set modulus first because >> reduces modulo p
 		ar >> ciphertext;
 	}
-	template<class Archive>
-	void serialize(Archive & ar, const unsigned int version)
+	/**
+	 * Bidirectional serialisation of this object
+	 *\see save
+	 *\see load
+	 * @param ar An Archive
+	 * @param version Class version
+	 */
+	template <class Archive> void serialize(Archive & ar, const unsigned int version)
 	{
 		boost::serialization::split_free(ar,*this,version);
 	}

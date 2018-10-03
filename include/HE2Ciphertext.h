@@ -15,7 +15,13 @@
 
 class HE2Ciphertext : public Ciphertext<NTL::vec_ZZ_p>{
 private:
+	/**
+	 * Public cipher parameter: the modulus for arithmetic
+	 */
 	static NTL::ZZ modulus;
+	/**
+	 * Public cipher parameter: the re-encryption matrix
+	 */
 	static NTL::mat_ZZ_p* R; //must be a pointer to avoid initialising with zero modulus
 	friend class boost::serialization::access;
 	template<class Archive>

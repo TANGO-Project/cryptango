@@ -1,0 +1,128 @@
+\hypertarget{PolyCiphertext_8cpp}{}\section{src/\+Poly\+Ciphertext.cpp File Reference}
+\label{PolyCiphertext_8cpp}\index{src/\+Poly\+Ciphertext.\+cpp@{src/\+Poly\+Ciphertext.\+cpp}}
+{\ttfamily \#include \char`\"{}Poly\+Ciphertext.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Poly\+Ciphertext.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PolyCiphertext_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{PolyCiphertext_8cpp_a2a25d0399b812261d703d84fd3a21fb9}{compare} (const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&a, const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&b)
+\item 
+bool \hyperlink{PolyCiphertext_8cpp_ab5a64cd27170239ff233b1a17f5b0de9}{operator$<$} (const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&a, const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&b)
+\item 
+bool \hyperlink{PolyCiphertext_8cpp_a3199ddbed52caee0d591894b60389144}{operator$<$=} (const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&a, const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&b)
+\item 
+bool \hyperlink{PolyCiphertext_8cpp_a441251a147b7c15eccf64048ba9fb0fe}{operator==} (const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&a, const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&b)
+\item 
+bool \hyperlink{PolyCiphertext_8cpp_a2a58b35102feabe6b31bacdd457d7884}{operator$>$} (const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&a, const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&b)
+\item 
+bool \hyperlink{PolyCiphertext_8cpp_ab76ec0162c70ea00a11f921d617d102d}{operator$>$=} (const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&a, const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{PolyCiphertext_8cpp_a2a25d0399b812261d703d84fd3a21fb9}\label{PolyCiphertext_8cpp_a2a25d0399b812261d703d84fd3a21fb9}} 
+\index{Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}!compare@{compare}}
+\index{compare@{compare}!Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}}
+\subsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily int compare (\begin{DoxyParamCaption}\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{a,  }\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{b }\end{DoxyParamCaption})}
+
+Auxiliary function to compare two polynomials lexicographically (a polynomial of larger degree is considered to be ordered higher than a lower degree polynomial). Returns -\/1 is {\ttfamily a.\+ciphertext} $<$ {\ttfamily b.\+ciphertext}, 0 if {\ttfamily a.\+ciphertext} = {\ttfamily b.\+ciphertext}, and 1 if {\ttfamily a.\+ciphertext} $>$ {\ttfamily b.\+ciphertext} 
+\begin{DoxyParams}{Parameters}
+{\em a} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+{\em b} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1, 0, or 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{PolyCiphertext_8cpp_ab5a64cd27170239ff233b1a17f5b0de9}\label{PolyCiphertext_8cpp_ab5a64cd27170239ff233b1a17f5b0de9}} 
+\index{Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{a,  }\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{b }\end{DoxyParamCaption})}
+
+Returns true if {\ttfamily a.\+ciphertext} is strictly less than {\ttfamily b.\+ciphertext} 
+\begin{DoxyParams}{Parameters}
+{\em a} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+{\em b} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} or {\ttfamily false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{PolyCiphertext_8cpp_a3199ddbed52caee0d591894b60389144}\label{PolyCiphertext_8cpp_a3199ddbed52caee0d591894b60389144}} 
+\index{Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}}
+\subsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool operator$<$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{a,  }\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{b }\end{DoxyParamCaption})}
+
+Returns true if {\ttfamily a.\+ciphertext} is less than or equal to {\ttfamily b.\+ciphertext} 
+\begin{DoxyParams}{Parameters}
+{\em a} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+{\em b} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} or {\ttfamily false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{PolyCiphertext_8cpp_a441251a147b7c15eccf64048ba9fb0fe}\label{PolyCiphertext_8cpp_a441251a147b7c15eccf64048ba9fb0fe}} 
+\index{Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{a,  }\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{b }\end{DoxyParamCaption})}
+
+Returns true if {\ttfamily a.\+ciphertext} is equal to {\ttfamily b.\+ciphertext} 
+\begin{DoxyParams}{Parameters}
+{\em a} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+{\em b} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} or {\ttfamily false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{PolyCiphertext_8cpp_a2a58b35102feabe6b31bacdd457d7884}\label{PolyCiphertext_8cpp_a2a58b35102feabe6b31bacdd457d7884}} 
+\index{Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{a,  }\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{b }\end{DoxyParamCaption})}
+
+Returns true if {\ttfamily a.\+ciphertext} is greater than {\ttfamily b.\+ciphertext} 
+\begin{DoxyParams}{Parameters}
+{\em a} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+{\em b} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} or {\ttfamily false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{PolyCiphertext_8cpp_ab76ec0162c70ea00a11f921d617d102d}\label{PolyCiphertext_8cpp_ab76ec0162c70ea00a11f921d617d102d}} 
+\index{Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Poly\+Ciphertext.\+cpp@{Poly\+Ciphertext.\+cpp}}
+\subsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool operator$>$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{a,  }\item[{const \hyperlink{classPolyCiphertext}{Poly\+Ciphertext} \&}]{b }\end{DoxyParamCaption})}
+
+Returns true if {\ttfamily a.\+ciphertext} is greater than or equal to {\ttfamily b.\+ciphertext} 
+\begin{DoxyParams}{Parameters}
+{\em a} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+{\em b} & A {\ttfamily \hyperlink{classPolyCiphertext}{Poly\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} or {\ttfamily false} 
+\end{DoxyReturn}

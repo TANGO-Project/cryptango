@@ -16,8 +16,6 @@
 
 class OPECiphertext: public Ciphertext<NTL::ZZ> {
 private:
-	friend int compare(const OPECiphertext& a, const OPECiphertext& b);
-
 	friend class boost::serialization::access;
 	template<class Archive>
 	void serialize(Archive & ar, const unsigned int version){

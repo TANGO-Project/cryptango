@@ -16,14 +16,30 @@
 
 class SSECiphertext: public Ciphertext<std::string> {
 private:
+	/**
+	 * The MAC tag of the \c payload
+	 */
 	CryptoPP::SecByteBlock tag;
+	/**
+	 * The AES-256 ciphertext
+	 */
 	CryptoPP::SecByteBlock payload;
+	/**
+	 * CMAC algorithm to generate tags
+	 */
 	CryptoPP::CMAC<CryptoPP::AES> mac;
 	CryptoPP::SecByteBlock decodeHexString(std::string& hexString);
 
+	/**
+	 * Required for Boost serialisation
+	 */
 	friend class boost::serialization::access;
-	template<class Archive>
-	void serialize(Archive & ar, const unsigned int version){
+	/**
+	 * Boost serialisation method. Serialises the object to a text or binary archive.
+	 * @param ar A Boost text or binary archive
+	 * @param version Version of class
+	 */
+	template<class Archive> void serialize(Archive & ar, const unsigned int version){
 		ar & ciphertext;
 		ar & tag;
 		ar & payload;

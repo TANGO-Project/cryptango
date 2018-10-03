@@ -14,12 +14,21 @@ xmpHandle_t HE1Array::handle;
 unsigned int HE1Array::maxPrecision;
 unsigned int HE1Array::maxWords;
 
-//Default ctor: creates new array of count ints
+/**
+ * Default constructor. It allocates memory for a device array of \em count multiprecision integers
+ * @param count The number of multiprecision integers in the device array
+ */
 HE1Array::HE1Array(unsigned int count) {
 	this->count = count;
 	XMP_CHECK_ERROR(xmpIntegersCreate(handle, &ciphertext, maxPrecision, count));
 }
 
+/**
+ * This constructor allocates memory for a device array of \em count multiprecision integers and
+ * initialises each integer to \em value
+ * @param value The initial value of each integer.
+ * @param count The number of multiprecision integers in the device array
+ */
 HE1Array::HE1Array(int value, unsigned int count) {
 	this->count = count;
 	word words[maxWords * count];
@@ -36,6 +45,11 @@ HE1Array::HE1Array(int value, unsigned int count) {
 	XMP_CHECK_ERROR(xmpIntegersImport(handle, ciphertext, maxWords, -1, sizeof(word), -1, 0, words, count));
 }
 
+/**
+ * This constructor allocates memory for a single multiprecision integer and
+ * initialises it to \em value, an NTL multiprecision integer
+ * @param value Intial value of integer
+ */
 HE1Array::HE1Array(NTL::ZZ& value) {
 	this->count = 1;
 	std::vector<word> words = ZZ_to_word_array(value,maxWords);
@@ -43,21 +57,33 @@ HE1Array::HE1Array(NTL::ZZ& value) {
 	XMP_CHECK_ERROR(xmpIntegersImport(handle, ciphertext, maxWords, -1, sizeof(word), -1, 0, words.data(), 1));
 }
 
-//Copy existing Int
+/**
+ * This constructor copies the \c xmpIntegers_t object into the \c ciphertext member.
+ * @param ciphertext \c xmpIntegers_t object
+ * @param count Number of integers in \c xmpIntegers_t object
+ */
 HE1Array::HE1Array(xmpIntegers_t ciphertext, unsigned int count) :
 		Ciphertext<xmpIntegers_t>(ciphertext) {
 	this->count = count;
 	this->ciphertext = ciphertext;
 }
 
-//Load array of words into Int
+
+/**
+ * Initialise \c xmpIntegers_t member by loading an array of words (word size is 4 bytes)
+ * @param inputs Word array
+ * @param count Number of integers in array
+ */
 HE1Array::HE1Array(word* inputs, unsigned int count) {
 	this->count = count;
 	XMP_CHECK_ERROR(xmpIntegersCreate(handle, &ciphertext, maxPrecision, count));
 	XMP_CHECK_ERROR(xmpIntegersImport(handle, ciphertext, maxWords, -1, sizeof(word), -1, 0, inputs, count));
 }
 
-//Load vector of ZZs into Int
+/**
+ * Intialise \c xmpIntegers_t member using a vector of NTL multiprecision integers
+ * @param v A vector of NTL multiprecision integers
+ */
 HE1Array::HE1Array(NTL::vec_ZZ& v) {
 	count = v.length();
 	word inputs[maxWords * count];
@@ -70,20 +96,34 @@ HE1Array::HE1Array(NTL::vec_ZZ& v) {
 	XMP_CHECK_ERROR(xmpIntegersImport(handle, ciphertext, maxWords, -1, sizeof(word), -1, 0, inputs, count));
 }
 
+/**
+ * Default virtual destructor. It frees the memory on the device allocated to \c xmpIntegers_t \c ciphertext member.
+ */
 HE1Array::~HE1Array() {
 	XMP_CHECK_ERROR(xmpIntegersDestroy(handle, ciphertext));
 }
 
+/**
+ * Accessor to get the number of integers stored in \c ciphertext
+ * @return The number of integers stored in \c ciphertext
+ */
 unsigned int HE1Array::get_count() {
 	return count;
 }
 
+/**
+ * Set \c ciphertext to an array of zeros
+ */
 void HE1Array::set_zero() {
 	word words[maxWords * count];
 	memset(reinterpret_cast<byte*>(words), 0, maxWords * sizeof(word) * count);
 	XMP_CHECK_ERROR(xmpIntegersImport(handle, ciphertext, maxWords, -1, sizeof(word), -1, 0, words, count));
 }
 
+/**
+ * Export the data in \c ciphertext to a host word array
+ * @return An array of words (4 bytes)
+ */
 std::vector<word> HE1Array::to_host_array() {
 	word buf[maxWords * count];
 	XMP_CHECK_ERROR(xmpIntegersExport(handle, buf, nullptr, -1, sizeof(word), -1, 0, ciphertext, count));
@@ -92,6 +132,12 @@ std::vector<word> HE1Array::to_host_array() {
 	return wordArray;
 }
 
+/**
+ * Convert an NTL multiprecision integer to a word array
+ * @param z NTL multiprecision integer
+ * @param numWords Number of words to store integer in
+ * @return Word array
+ */
 std::vector<word> HE1Array::ZZ_to_word_array(NTL::ZZ& z, int numWords){
 	long numBytes = NumBytes(z);
 	byte bytes[numBytes];
@@ -104,6 +150,11 @@ std::vector<word> HE1Array::ZZ_to_word_array(NTL::ZZ& z, int numWords){
 	return wordArray;
 }
 
+/**
+ * Performs modular addition of the integers in \c ciphertext with those in the \c ciphertext member of \c o.
+ * @param o Another \c HE1Array object
+ * @return \c this object
+ */
 HE1Array& HE1Array::operator+=(HE1Array& o) {
 	if (count != o.get_count())
 		exit (cudaErrorInvalidValue);
@@ -119,6 +170,11 @@ HE1Array& HE1Array::operator+=(HE1Array& o) {
 	return *this;
 }
 
+/**
+ * Performs modular multiplication of the integers in \c ciphertext with those in the \c ciphertext member of \c o.
+ * @param o Another \c HE1Array object
+ * @return \c this object
+ */
 HE1Array& HE1Array::operator*=(HE1Array& o) {
 	if (count != o.get_count()) exit(cudaErrorInvalidValue);
 	//Create a temporary double precision int to store product avoiding overflow
@@ -133,6 +189,12 @@ HE1Array& HE1Array::operator*=(HE1Array& o) {
 	return *this;
 }
 
+/**
+ * Performs modular addition of the two \c xmpIntegers_t member arrays (\c ciphertext ) elementwise and returns a new object containing the array of sums
+ * @param a A \c HE1Array object
+ * @param b A \c HE1Array object
+ * @return A \c HE1Array object
+ */
 HE1Array operator+(HE1Array& a, HE1Array& b) {
 	if (a.count != b.count) exit(cudaErrorInvalidValue);
 	HE1Array c(a.count);
@@ -148,6 +210,12 @@ HE1Array operator+(HE1Array& a, HE1Array& b) {
 	return c;
 }
 
+/**
+ * Performs modular multiplication the two \c xmpIntegers_t member arrays (\c ciphertext ) elementwise and returns a new object containing the array of sums
+ * @param a A \c HE1Array object
+ * @param b A \c HE1Array object
+ * @return A \c HE1Array object
+ */
 HE1Array operator*(HE1Array& a, HE1Array& b) {
 	if (a.count != b.count) exit(cudaErrorInvalidValue);
 	HE1Array c(a.count);
@@ -163,14 +231,24 @@ HE1Array operator*(HE1Array& a, HE1Array& b) {
 	return c;
 }
 
+/**
+ * A static class method to create an XMP device context handle.
+ */
 void HE1Array::create_device_handle() {
 	XMP_CHECK_ERROR(xmpHandleCreate(&handle));
 }
 
+/**
+ * A static class method to destroy an existing XMP device context handle.
+ */
 void HE1Array::delete_device_handle() {
 	XMP_CHECK_ERROR(xmpHandleDestroy(handle));
 }
 
+/**
+ * Creates an \c xmpIntegers_t on the device to store the modulus for arithmetic and assigns \c mod to it. \c maxPrecision and \c maxWords are set to the number of bits and words required to store \c mod.
+ * @param mod An NTL multiprecision integer containing the modulus
+ */
 void HE1Array::create_device_modulus(NTL::ZZ& mod) {
 	if (handle != nullptr) {
 		long numBytes = NTL::NumBytes(mod);
@@ -187,10 +265,17 @@ void HE1Array::create_device_modulus(NTL::ZZ& mod) {
 		throw std::logic_error("HE1Array::createDeviceModulus called before createDeviceHandle");
 }
 
+/**
+ * Destroys the \c xmpIntegers_t containing the modulus
+ */
 void HE1Array::delete_device_modulus() {
 	XMP_CHECK_ERROR(xmpIntegersDestroy(handle, modulus));
 }
 
+/**
+ * Export the data in \c ciphertext to an NTL vector of integers
+ * @return NTL integer vector
+ */
 NTL::vec_ZZ HE1Array::to_ZZ_vector() {
 	NTL::vec_ZZ v;
 	word buf[maxWords * count];

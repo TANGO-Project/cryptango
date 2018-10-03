@@ -17,6 +17,9 @@
 #include <NTL/vec_ZZ.h>
 #include "Ciphertext.hpp"
 
+/**
+ * Macro to convert the XMP error code to a user-friendly string and then exit the program with a failure code
+ */
 #define XMP_CHECK_ERROR(fun) \
 {                             \
   xmpError_t error=fun;     \
@@ -29,17 +32,39 @@
   } \
 }
 
+/**
+ * Defines a \c byte as an unsigned 8 bit integer
+ */
 typedef uint8_t byte;
+/**
+ * Defines a \c word as an unsigned 32 bit integer
+ */
 typedef uint32_t word;
 
 class HE1Array: public Ciphertext<xmpIntegers_t> {
 private:
+	/**
+	 * Contains the modulus for modular arithmetic on the device
+	 */
 	static xmpIntegers_t modulus;
+	/**
+	 * The XMP device context handle
+	 */
 	static xmpHandle_t handle;
+	/**
+	 * The maximum precision for \c ciphertext
+	 */
 	static unsigned int maxPrecision;
+	/**
+	 * The maximum number of words in \c ciphertext
+	 */
 	static unsigned int maxWords;
 
-	unsigned int count; //Number of integers stored in ciphertext array
+	/**
+	 * Number of integers stored in ciphertext array
+	 */
+	unsigned int count;
+
 	static std::vector<word> ZZ_to_word_array(NTL::ZZ& z, int numWords);
 public:
 	HE1Array(unsigned int count);

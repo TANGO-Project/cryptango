@@ -1,0 +1,356 @@
+\hypertarget{classHE2Ciphertext}{}\section{H\+E2\+Ciphertext Class Reference}
+\label{classHE2Ciphertext}\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+
+
+{\ttfamily \#include $<$H\+E2\+Ciphertext.\+h$>$}
+
+
+
+Inheritance diagram for H\+E2\+Ciphertext\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classHE2Ciphertext__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for H\+E2\+Ciphertext\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classHE2Ciphertext__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHE2Ciphertext_ad5bfed280b98c618f55fb7bf28a7b1cd}{H\+E2\+Ciphertext} ()
+\item 
+\hyperlink{classHE2Ciphertext_a8d74aeeaa1af989e7e033f5f35c54550}{H\+E2\+Ciphertext} (N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p \&\hyperlink{classCiphertext_adef9aae9d923eb100b4a1ad58ce495f1}{ciphertext})
+\item 
+\hyperlink{classHE2Ciphertext_a3c8e2e1657aab1597223ed3b04cdff0e}{H\+E2\+Ciphertext} (N\+T\+L\+::vec\+\_\+\+ZZ \&\hyperlink{classCiphertext_adef9aae9d923eb100b4a1ad58ce495f1}{ciphertext})
+\item 
+\hyperlink{classHE2Ciphertext_a0b43eb4010e5dcb24c185b16f96fdf18}{H\+E2\+Ciphertext} (std\+::string \&str)
+\item 
+virtual \hyperlink{classHE2Ciphertext_a5acc06ab4a495f477c43814bea877dcd}{$\sim$\+H\+E2\+Ciphertext} ()
+\item 
+\hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \& \hyperlink{classHE2Ciphertext_a5c54fb70a082d42607ed6923b9d9118b}{operator+=} (const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&o)
+\item 
+\hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \& \hyperlink{classHE2Ciphertext_aa0502b251b22d25db90ef16bc2f05122}{operator$\ast$=} (const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&o)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classHE2Ciphertext_afb27eefed819559aaebdaf0eb10d7311}{set\+Modulus} (N\+T\+L\+::\+ZZ \&\hyperlink{classHE2Ciphertext_a590c7d8432a2a73ebe0607f402c6a46a}{modulus})
+\item 
+static void \hyperlink{classHE2Ciphertext_a8369345555e2b6df742e238353bd8707}{set\+Matrix} (N\+T\+L\+::mat\+\_\+\+Z\+Z\+\_\+p $\ast$\hyperlink{classHE2Ciphertext_aad6e0d90aa41cb80b75feebc1b07e1c0}{R})
+\item 
+static void \hyperlink{classHE2Ciphertext_ae3b1a39f8c20cc4d97bcc1ea70cf641e}{set\+Parameters} (std\+::string \&parameters)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \hyperlink{classHE2Ciphertext_a0fcff8ec1b87d67f22da109ba9cc4931}{save} (Archive \&ar, const unsigned int version) const
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \hyperlink{classHE2Ciphertext_a2cfa63d6dacdb977ecf6a0043b207b92}{load} (Archive \&ar, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \hyperlink{classHE2Ciphertext_a143f80d41791ba3eff4f76b43734daec}{serialize} (Archive \&ar, const unsigned int version)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p \hyperlink{classHE2Ciphertext_af8e0dca1959cf2cbd7606d48476c435a}{augment} (const N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p \&v)
+\item 
+static N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p \hyperlink{classHE2Ciphertext_a30047cae60f901b106371d70027bf286}{product} (const N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p \&a, const N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p \&b)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static N\+T\+L\+::\+ZZ \hyperlink{classHE2Ciphertext_a590c7d8432a2a73ebe0607f402c6a46a}{modulus}
+\item 
+static N\+T\+L\+::mat\+\_\+\+Z\+Z\+\_\+p $\ast$ \hyperlink{classHE2Ciphertext_aad6e0d90aa41cb80b75feebc1b07e1c0}{R}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classHE2Ciphertext_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\item 
+std\+::ostream \& \hyperlink{classHE2Ciphertext_a5d9b4ffb87a447db8b95de9c64401e0f}{operator$<$$<$} (std\+::ostream \&o, const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&c)
+\item 
+std\+::istream \& \hyperlink{classHE2Ciphertext_a8cd6e8f36f12e9b0548d6f66fae71816}{operator$>$$>$} (std\+::istream \&i, \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&c)
+\item 
+\hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \hyperlink{classHE2Ciphertext_af90fd206e69fa74b30d40f41f707bdb8}{operator+} (const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&a, const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&b)
+\item 
+\hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \hyperlink{classHE2Ciphertext_adfb636b8ce661b0edbd9297cdcf61c88}{operator$\ast$} (const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&a, const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&b)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHE2Ciphertext_ad5bfed280b98c618f55fb7bf28a7b1cd}\label{classHE2Ciphertext_ad5bfed280b98c618f55fb7bf28a7b1cd}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{H\+E2\+Ciphertext()}{HE2Ciphertext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily H\+E2\+Ciphertext\+::\+H\+E2\+Ciphertext (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor \mbox{\Hypertarget{classHE2Ciphertext_a8d74aeeaa1af989e7e033f5f35c54550}\label{classHE2Ciphertext_a8d74aeeaa1af989e7e033f5f35c54550}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{H\+E2\+Ciphertext()}{HE2Ciphertext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily H\+E2\+Ciphertext\+::\+H\+E2\+Ciphertext (\begin{DoxyParamCaption}\item[{N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p \&}]{ciphertext }\end{DoxyParamCaption})}
+
+Initialize {\ttfamily ciphertext} with the value supplied 
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & A 2-\/vector of multiprecision integers modulo {\ttfamily modulus} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE2Ciphertext_a3c8e2e1657aab1597223ed3b04cdff0e}\label{classHE2Ciphertext_a3c8e2e1657aab1597223ed3b04cdff0e}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{H\+E2\+Ciphertext()}{HE2Ciphertext()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily H\+E2\+Ciphertext\+::\+H\+E2\+Ciphertext (\begin{DoxyParamCaption}\item[{N\+T\+L\+::vec\+\_\+\+ZZ \&}]{ciphertext }\end{DoxyParamCaption})}
+
+Initialize {\ttfamily ciphertext} with the value supplied 
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & A 2-\/vector of multiprecision integers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE2Ciphertext_a0b43eb4010e5dcb24c185b16f96fdf18}\label{classHE2Ciphertext_a0b43eb4010e5dcb24c185b16f96fdf18}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{H\+E2\+Ciphertext()}{HE2Ciphertext()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily H\+E2\+Ciphertext\+::\+H\+E2\+Ciphertext (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+Initialize {\ttfamily ciphertext} with the string representation of a 2-\/vector 
+\begin{DoxyParams}{Parameters}
+{\em str} & String representation of a 2-\/vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE2Ciphertext_a5acc06ab4a495f477c43814bea877dcd}\label{classHE2Ciphertext_a5acc06ab4a495f477c43814bea877dcd}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!````~H\+E2\+Ciphertext@{$\sim$\+H\+E2\+Ciphertext}}
+\index{````~H\+E2\+Ciphertext@{$\sim$\+H\+E2\+Ciphertext}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{$\sim$\+H\+E2\+Ciphertext()}{~HE2Ciphertext()}}
+{\footnotesize\ttfamily H\+E2\+Ciphertext\+::$\sim$\+H\+E2\+Ciphertext (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classHE2Ciphertext_af8e0dca1959cf2cbd7606d48476c435a}\label{classHE2Ciphertext_af8e0dca1959cf2cbd7606d48476c435a}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!augment@{augment}}
+\index{augment@{augment}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{augment()}{augment()}}
+{\footnotesize\ttfamily N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p H\+E2\+Ciphertext\+::augment (\begin{DoxyParamCaption}\item[{const N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Constructs the augmented 3-\/vector for 2-\/vector {\ttfamily v}. 
+\begin{DoxyParams}{Parameters}
+{\em v} & An N\+TL vector of modular integers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An N\+TL vector of modular integers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE2Ciphertext_a2cfa63d6dacdb977ecf6a0043b207b92}\label{classHE2Ciphertext_a2cfa63d6dacdb977ecf6a0043b207b92}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!load@{load}}
+\index{load@{load}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void H\+E2\+Ciphertext\+::load (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classHE2Ciphertext_aa0502b251b22d25db90ef16bc2f05122}\label{classHE2Ciphertext_aa0502b251b22d25db90ef16bc2f05122}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \& H\+E2\+Ciphertext\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&}]{o }\end{DoxyParamCaption})}
+
+Multiply the ciphertexts and assign to this objects {\ttfamily ciphertext} member. In the context of the H\+E2 ciphers, multiplication is the Hadamard product (\begin{DoxySeeAlso}{See also}
+\hyperlink{classHE2Ciphertext_a30047cae60f901b106371d70027bf286}{product}) of augmented vectors (
+
+\hyperlink{classHE2Ciphertext_af8e0dca1959cf2cbd7606d48476c435a}{augment}), followed by multiplication by the matrix {\ttfamily \hyperlink{classHE2Ciphertext_aad6e0d90aa41cb80b75feebc1b07e1c0}{R}}. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Another {\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to this object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE2Ciphertext_a5c54fb70a082d42607ed6923b9d9118b}\label{classHE2Ciphertext_a5c54fb70a082d42607ed6923b9d9118b}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \& H\+E2\+Ciphertext\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&}]{o }\end{DoxyParamCaption})}
+
+Add the ciphertexts and assign to this objects {\ttfamily ciphertext} member 
+\begin{DoxyParams}{Parameters}
+{\em o} & Another {\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to this object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE2Ciphertext_a30047cae60f901b106371d70027bf286}\label{classHE2Ciphertext_a30047cae60f901b106371d70027bf286}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!product@{product}}
+\index{product@{product}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{product()}{product()}}
+{\footnotesize\ttfamily N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p H\+E2\+Ciphertext\+::product (\begin{DoxyParamCaption}\item[{const N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p \&}]{a,  }\item[{const N\+T\+L\+::vec\+\_\+\+Z\+Z\+\_\+p \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Computes the Hadamard product of two vectors 
+\begin{DoxyParams}{Parameters}
+{\em a} & An N\+TL vector of modular integers \\
+\hline
+{\em b} & An N\+TL vector of modular integers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An N\+TL vector of modular integers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE2Ciphertext_a0fcff8ec1b87d67f22da109ba9cc4931}\label{classHE2Ciphertext_a0fcff8ec1b87d67f22da109ba9cc4931}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!save@{save}}
+\index{save@{save}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void H\+E2\+Ciphertext\+::save (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classHE2Ciphertext_a143f80d41791ba3eff4f76b43734daec}\label{classHE2Ciphertext_a143f80d41791ba3eff4f76b43734daec}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!serialize@{serialize}}
+\index{serialize@{serialize}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void H\+E2\+Ciphertext\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classHE2Ciphertext_a8369345555e2b6df742e238353bd8707}\label{classHE2Ciphertext_a8369345555e2b6df742e238353bd8707}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!set\+Matrix@{set\+Matrix}}
+\index{set\+Matrix@{set\+Matrix}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{set\+Matrix()}{setMatrix()}}
+{\footnotesize\ttfamily void H\+E2\+Ciphertext\+::set\+Matrix (\begin{DoxyParamCaption}\item[{N\+T\+L\+::mat\+\_\+\+Z\+Z\+\_\+p $\ast$}]{Rmatrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set the public re-\/encryption matrix, {\ttfamily R}. 
+\begin{DoxyParams}{Parameters}
+{\em Rmatrix} & N\+TL matrix of modular integers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE2Ciphertext_afb27eefed819559aaebdaf0eb10d7311}\label{classHE2Ciphertext_afb27eefed819559aaebdaf0eb10d7311}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!set\+Modulus@{set\+Modulus}}
+\index{set\+Modulus@{set\+Modulus}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{set\+Modulus()}{setModulus()}}
+{\footnotesize\ttfamily void H\+E2\+Ciphertext\+::set\+Modulus (\begin{DoxyParamCaption}\item[{N\+T\+L\+::\+ZZ \&}]{mod }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set the public modulus for arithmetic 
+\begin{DoxyParams}{Parameters}
+{\em mod} & N\+TL multiprecision integer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHE2Ciphertext_ae3b1a39f8c20cc4d97bcc1ea70cf641e}\label{classHE2Ciphertext_ae3b1a39f8c20cc4d97bcc1ea70cf641e}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!set\+Parameters@{set\+Parameters}}
+\index{set\+Parameters@{set\+Parameters}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{set\+Parameters()}{setParameters()}}
+{\footnotesize\ttfamily void H\+E2\+Ciphertext\+::set\+Parameters (\begin{DoxyParamCaption}\item[{std\+::string \&}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set the public cipher parameters {\ttfamily modulus} and {\ttfamily R} from a J\+S\+ON string. 
+\begin{DoxyParams}{Parameters}
+{\em parameters} & J\+S\+ON string \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classHE2Ciphertext_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classHE2Ciphertext_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{boost\+::serialization\+::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classHE2Ciphertext_adfb636b8ce661b0edbd9297cdcf61c88}\label{classHE2Ciphertext_adfb636b8ce661b0edbd9297cdcf61c88}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator$\ast$}{operator*}}
+{\footnotesize\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&}]{a,  }\item[{const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Multiplies the {\ttfamily ciphertexts} of each object. In the context of the H\+E2 ciphers, multiplication is the Hadamard product of augmented vectors, followed by multiplication by the matrix {\ttfamily R}. \begin{DoxySeeAlso}{See also}
+\hyperlink{classHE2Ciphertext_a30047cae60f901b106371d70027bf286}{product} 
+
+\hyperlink{classHE2Ciphertext_af8e0dca1959cf2cbd7606d48476c435a}{augment} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & An {\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext}} object \\
+\hline
+{\em b} & An {\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new {\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext}} object containing the sum 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE2Ciphertext_af90fd206e69fa74b30d40f41f707bdb8}\label{classHE2Ciphertext_af90fd206e69fa74b30d40f41f707bdb8}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!operator+@{operator+}}
+\index{operator+@{operator+}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&}]{a,  }\item[{const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Add the {\ttfamily ciphertexts} of each object 
+\begin{DoxyParams}{Parameters}
+{\em a} & An {\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext}} object \\
+\hline
+{\em b} & An {\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new {\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext}} object containing the sum 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE2Ciphertext_a5d9b4ffb87a447db8b95de9c64401e0f}\label{classHE2Ciphertext_a5d9b4ffb87a447db8b95de9c64401e0f}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{const \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Write the {\ttfamily ciphertext} to a stream 
+\begin{DoxyParams}{Parameters}
+{\em o} & An output stream \\
+\hline
+{\em c} & A {\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the output stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHE2Ciphertext_a8cd6e8f36f12e9b0548d6f66fae71816}\label{classHE2Ciphertext_a8cd6e8f36f12e9b0548d6f66fae71816}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{i,  }\item[{\hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Read the {\ttfamily ciphertext} from an input stream 
+\begin{DoxyParams}{Parameters}
+{\em i} & An input stream \\
+\hline
+{\em c} & A {\ttfamily \hyperlink{classHE2Ciphertext}{H\+E2\+Ciphertext}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the output stream 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classHE2Ciphertext_a590c7d8432a2a73ebe0607f402c6a46a}\label{classHE2Ciphertext_a590c7d8432a2a73ebe0607f402c6a46a}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!modulus@{modulus}}
+\index{modulus@{modulus}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{modulus}{modulus}}
+{\footnotesize\ttfamily N\+T\+L\+::\+ZZ H\+E2\+Ciphertext\+::modulus\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Public cipher parameter\+: the modulus for arithmetic \mbox{\Hypertarget{classHE2Ciphertext_aad6e0d90aa41cb80b75feebc1b07e1c0}\label{classHE2Ciphertext_aad6e0d90aa41cb80b75feebc1b07e1c0}} 
+\index{H\+E2\+Ciphertext@{H\+E2\+Ciphertext}!R@{R}}
+\index{R@{R}!H\+E2\+Ciphertext@{H\+E2\+Ciphertext}}
+\subsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily N\+T\+L\+::mat\+\_\+\+Z\+Z\+\_\+p $\ast$ H\+E2\+Ciphertext\+::R\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Public cipher parameter\+: the re-\/encryption matrix 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{HE2Ciphertext_8h}{H\+E2\+Ciphertext.\+h}\item 
+src/\hyperlink{HE2Ciphertext_8cpp}{H\+E2\+Ciphertext.\+cpp}\end{DoxyCompactItemize}
