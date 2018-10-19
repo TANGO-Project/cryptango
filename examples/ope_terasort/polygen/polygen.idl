@@ -1,0 +1,3 @@
+interface polygen{
+	void run_map_task(in int mu, in int n, in int numOutputs, in File secrets, out File output, out File timings);
+};

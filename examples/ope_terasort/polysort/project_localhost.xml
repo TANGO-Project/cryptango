@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project>
+    <MasterNode/>
+    <ComputeNode Name="localhost">
+        <InstallDir>COMPSS_HOME</InstallDir>
+        <WorkingDir>/tmp/COMPSsWorker/</WorkingDir>
+        <Application>
+        	<AppDir>PATH_TO_APP_DIR</AppDir>
+        </Application>
+    </ComputeNode>
+</Project>

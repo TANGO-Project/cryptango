@@ -1,0 +1,3 @@
+interface polyvalidate{
+	void run_map_task(in File secrets, in File inputFile, out File outputFile, out File timingsFile);
+};

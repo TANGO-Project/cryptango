@@ -1,0 +1,4 @@
+interface polysort{
+	void run_map_task(in File inputSplit, in File partitionListFile, out File mapOutputFile, out File mapTimingsFile);
+	void run_reduce_task(in File partitionsFile, out File outFile, out File reduceTimingsFile);
+};

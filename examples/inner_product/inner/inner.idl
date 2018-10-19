@@ -1,0 +1,9 @@
+interface inner{
+	@Constraints(processors={@Processor(ProcessorType=CPU, ComputingUnits=5)});
+	void run_map_task(in int numPerLine, in File parametersPath, in File inputPath, out File resultsPath);
+
+
+	@Constraints(processors={@Processor(ProcessorType=GPU, ComputingUnits=1)});
+    @Implements(run_map_task);
+	void run_map_task_GPU(in int numPerLine, in File parametersPath, in File inputPath, out File resultsPath);
+};

@@ -1,0 +1,3 @@
+interface innergen{
+	void run_map_task(in int rho, in int d, in int numLines, in File secrets, in File parameters, out File outputPath, out File resultsPath);
+};
