@@ -9,7 +9,7 @@ all: innervalidate
 innervalidate: $(OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L/usr/lib -L/usr/lib/x86_64-linux-gnu -L/home/scsjd/.local/lib -o innervalidate $(OBJS) $(LIBS)
+	g++ -L/usr/lib -L/usr/lib/x86_64-linux-gnu -L$(HOME)/.local/lib -o innervalidate $(OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
